@@ -1,1 +1,0 @@
-<h1>PAGINA DE PRODUCTOS</h1>
