@@ -1,7 +1,7 @@
  <!-- main-footer -->
 <footer class="main-footer">
 
-<strong>Copyright &copy; 2017 <a href="#">Tutoriales a tu Alcance</a>.</strong> Todos los derechos reservados.
+<strong>Copyright &copy; 2019 <a href="#">Next Page</a>.</strong> Todos los derechos reservados.
 
 </footer>
 <!-- main-footer -->
