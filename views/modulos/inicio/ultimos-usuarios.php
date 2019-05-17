@@ -2,7 +2,7 @@
 
 $usuarios = ControladorUsuarios::ctrMostrarTotalUsuarios("fecha");
 
-$url = Route::ctrRoute();
+$url = Ruta::ctrRuta();
 
 ?>
 
@@ -54,7 +54,7 @@ $url = Route::ctrRoute();
 		     	if($usuarios[$i]["modo"] != "directo"){
 
 			     	echo '<li>
-					      <img src="'.$usuarios[$i]["foto"].'" alt="User Image" style="width:70%">
+					      <img src="'.$usuarios[$i]["foto"].'" alt="User Image" style="width:100px">
 					      <a class="users-list-name" href="">'.$usuarios[$i]["nombre"].'</a>
 					      <span class="users-list-date">'.$usuarios[$i]["fecha"].'</span>
 					      </li>';
@@ -63,7 +63,7 @@ $url = Route::ctrRoute();
 
 
 			     	echo '<li>
-					      <img src="'.$url.$usuarios[$i]["foto"].'" alt="User Image" style="width:70%">
+					      <img src="'.$url.$usuarios[$i]["foto"].'" alt="User Image" style="width:100px">
 					      <a class="users-list-name" href="">'.$usuarios[$i]["nombre"].'</a>
 					      <span class="users-list-date">'.$usuarios[$i]["fecha"].'</span>
 					      </li>';
@@ -73,7 +73,7 @@ $url = Route::ctrRoute();
 			}else{
 
 				 echo ' <li>
-                  <img src="views/images/usuarios/default/anonymous.png" alt="User Image" style="width:70%;">
+                  <img src="views/images/usuarios/default/anonymous.png" alt="User Image" style="width:100px;">
                   <a class="users-list-name" href="#">'.$usuarios[$i]["nombre"].'</a>
                   <span class="users-list-date">'.$usuarios[$i]["fecha"].'</span>
                 </li>';

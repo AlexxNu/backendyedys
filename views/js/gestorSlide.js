@@ -4,7 +4,7 @@ AGREGAR SLIDE
 
 $(".agregarSlide").click(function(){
 
-	var imgFondo = "vistas/img/slide/default/fondo.jpg";
+	var imgFondo = "views/images/slide/default/fondo.jpg";
 	var tipoSlide = "slideOpcion1";
 	var estiloTextoSlide = '{"top":"20","right":"","left":"15","width":"40"}';
 	var titulo1 = '{"texto":"Lorem Ipsum","color":"#333"}';

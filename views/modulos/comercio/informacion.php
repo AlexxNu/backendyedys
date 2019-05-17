@@ -199,6 +199,73 @@ $comercio = ControladorComercio::ctrSeleccionarComercio();
 
 	    </div>
 
+	    <!-- PASARELA DE PAGO PAYU -->
+
+		<div class="panel panel-default">
+    
+	  		<div class="panel-heading">
+
+	      		<h4 class="text-uppercase">Configuración Payu Latam</h4>
+
+	      	</div>
+
+	      	<div class="panel-body">
+
+	        	<div class="form-group row">
+	          
+	          		<div class="col-xs-3">
+
+	          			<label>Modo:</label>
+	            
+				             <?php
+
+				          if($comercio["modoPayu"] == "sandbox"){
+
+				            echo '<label class="checkbox"><input class="cambioInformacion" type="radio" value="sandbox" name="modoPayu" checked>  Sandbox</label>
+				              <label class="checkbox"><input class="cambioInformacion" type="radio" value="live" name="modoPayu"> Live</label>';
+				          
+				          }else{
+
+				            echo '<label class="checkbox"><input class="cambioInformacion" type="radio" value="sandbox" name="modoPayu">  Sandbox</label>
+				              <label class="checkbox"><input class="cambioInformacion" type="radio" value="live" name="modoPayu" checked> Live</label>';
+
+				          }
+
+				          ?>
+
+	          		</div>
+	          
+		          	<div class="col-xs-3">
+		            
+		            	<label for="comment">Merchant Id:</label>
+		      
+		            	<input type="text" class="form-control cambioInformacion" id="merchantIdPayu" value="<?php echo $comercio["merchantIdPayu"]; ?>" >
+
+		          	</div>
+	          
+	          		<div class="col-xs-3">
+
+	        			<label for="comment">Account Id:</label>
+	      
+	            		<input type="text" class="form-control cambioInformacion" id="accountIdPayu" value="<?php echo $comercio["accountIdPayu"]; ?>">
+
+	     		 	</div>
+
+	      			<div class="col-xs-3">
+
+	            		<label for="comment">Api Key:</label>
+	      
+	             		<input type="text" class="form-control cambioInformacion" id="apiKeyPayu" value="<?php echo $comercio["apiKeyPayu"]; ?>">
+
+	          		</div>
+
+	        	</div>
+
+	      	</div>
+
+    	</div>
+		
+	</div>
 
   	<div class="box-footer">
       

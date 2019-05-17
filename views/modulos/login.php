@@ -1,7 +1,7 @@
 <div class="login-box">
 
-<div class="login-logo">
-    <a href=""><b>Tedys </b>Toys</a>
+  <div class="login-logo">
+    <img src="views/images/plantilla/logo.png" class="img-responsive" style="padding:10px 50px;">
   </div>
   <!-- /.login-logo -->
 
@@ -34,8 +34,8 @@
         $login = new ControladorAdministradores();
         $login -> ctrIngresoAdministrador();
 
-        ?>
-     
+      ?>
+
     </form>
 
   </div>

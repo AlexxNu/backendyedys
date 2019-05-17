@@ -1,3 +1,19 @@
+<?php
+
+if($_SESSION["perfil"] != "administrador"){
+
+echo '<script>
+
+  window.location = "inicio";
+
+</script>';
+
+return;
+
+}
+
+?>
+
 <div class="content-wrapper">
 
   <section class="content-header">
@@ -28,11 +44,23 @@
       
       <?php
 
-       /*=====================================
-        ADMINISTRAR CÓDIGOS
+        /*=============================================
+        ADMINISTRACIÓN DE LOGOTIPO E ICONO
+        =============================================*/
+
+        include "comercio/logotipo.php";
+
+        /*=====================================
+        ADMINISTRAR COLORES
         ======================================*/
   
-        include "comercio/codigos.php";
+        include "comercio/colores.php";
+
+        /*=====================================
+        ADMINISTRAR REDES SOCIALES
+        ======================================*/
+  
+        include "comercio/redSocial.php";
         
       ?>
       
@@ -47,7 +75,11 @@
 
         <?php
         
-       
+       /*=====================================
+        ADMINISTRAR CÓDIGOS
+        ======================================*/
+  
+        include "comercio/codigos.php";
 
         /*=====================================
         ADMINISTRAR COMERCIO
