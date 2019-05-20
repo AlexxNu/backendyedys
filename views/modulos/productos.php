@@ -38,18 +38,14 @@
          
             <tr>
              
-               <th style="width:10px">#</th>
-               <th>Titulo</th>
+               <th style="width:10px"># </th>
+               <th>TITULO</th>
                <th>Categoria</th>
-               <th>Subcategoria</th>
                <th>Ruta</th>
                <th>Estado</th>
-               <th>Tipo</th>
                <th>Descripción</th>
-               <th>Palabras claves</th>
                <th>Portada</th>
                <th>Imagen Principal</th>
-               <th>Multimedia</th>
                <th>Detalles</th>
                <th>Precio</th>
                <th>Peso</th>

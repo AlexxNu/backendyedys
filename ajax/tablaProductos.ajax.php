@@ -6,8 +6,8 @@ require_once "../modelos/productos.modelo.php";
 require_once "../controladores/categorias.controlador.php";
 require_once "../modelos/categorias.modelo.php";
 
-require_once "../controladores/subcategorias.controlador.php";
-require_once "../modelos/subcategorias.modelo.php";
+//require_once "../controladores/subcategorias.controlador.php";
+//require_once "../modelos/subcategorias.modelo.php";
 
 require_once "../controladores/cabeceras.controlador.php";
 require_once "../modelos/cabeceras.modelo.php";
@@ -23,7 +23,9 @@ class TablaProductos{
   	$item = null;
   	$valor = null;
 
-  	$productos = ControladorProductos::ctrMostrarProductos($item, $valor);
+	  $productos = ControladorProductos::ctrMostrarProductos($item, $valor);
+	  
+	 
 
     if(count($productos) == 0){
 
@@ -64,7 +66,7 @@ class TablaProductos{
   			TRAER LAS SUBCATEGORÍAS
   			=============================================*/
 
-  			$item2 = "id";
+  			/*$item2 = "id";
 			$valor2 = $productos[$i]["id_subcategoria"];
 
 			$subcategorias = ControladorSubCategorias::ctrMostrarSubCategorias($item2, $valor2);
@@ -76,7 +78,7 @@ class TablaProductos{
 			}else{
 
 				$subcategoria = $subcategorias[0]["subcategoria"];
-			}
+			}  */
 
 			/*=============================================
   			AGREGAR ETIQUETAS DE ESTADO
@@ -124,7 +126,7 @@ class TablaProductos{
 
   			/*=============================================
 			TRAER MULTIMEDIA
-  			=============================================*/
+  			=============================================
 
   			if($productos[$i]["multimedia"] != null){
 
@@ -146,20 +148,20 @@ class TablaProductos{
   				$vistaMultimedia = "<img src='views/images/multimedia/default/default.jpg' class='img-thumbnail imgTablaMultimedia' width='100px'>";
 
   			}
-
+                */
   			/*=============================================
   			TRAER DETALLES
   			=============================================*/
 
   			$detalles = json_decode($productos[$i]["detalles"],true);
 
-  			if($productos[$i]["tipo"] == "fisico"){
+  			if($productos[$i]["detalles"] != ""){
 
-  				$talla = json_encode($detalles["Talla"]);
+  				$tamaño = json_encode($detalles["Tamaño"]);
 				$color = json_encode($detalles["Color"]);
-				$marca = json_encode($detalles["Marca"]);
+	
 
-				$vistaDetalles = "Talla: ".str_replace(array("[","]",'"'), "", $talla)." - Color: ".str_replace(array("[","]",'"'), "", $color)." - Marca: ".str_replace(array("[","]",'"'), "", $marca);
+				$vistaDetalles = "Tamaño: ".str_replace(array("[","]",'"'), "", $tamaño)." - Color: ".str_replace(array("[","]",'"'), "", $color)." - Marca: ");
 
 
   			}else{
@@ -240,7 +242,7 @@ class TablaProductos{
   			TRAER LAS ACCIONES
   			=============================================*/
 
-  			$acciones = "<div class='btn-group'><button class='btn btn-warning btnEditarProducto' idProducto='".$productos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarProducto' idProducto='".$productos[$i]["id"]."' imgOferta='".$productos[$i]["imgOferta"]."' rutaCabecera='".$productos[$i]["ruta"]."' imgPortada='".$cabeceras["portada"]."' imgPrincipal='".$productos[$i]["portada"]."'><i class='fa fa-times'></i></button></div>";
+  			$acciones = "<div class='btn-group'><button class='btn btn-warning btnEditarProducto' idProducto='".$productos[$i]["id_product"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarProducto' idProducto='".$productos[$i]["id_product"]."' imgOferta='".$productos[$i]["imgOferta"]."' rutaCabecera='".$productos[$i]["ruta"]."' imgPortada='".$cabeceras["portada"]."' imgPrincipal='".$productos[$i]["portada"]."'><i class='fa fa-times'></i></button></div>";
 
   			/*=============================================
   			CONSTRUIR LOS DATOS JSON
@@ -252,15 +254,11 @@ class TablaProductos{
 					"'.($i+1).'",
 					"'.$productos[$i]["titulo"].'",
 					"'.$categoria.'",
-					"'.$subcategoria.'",
 					"'.$productos[$i]["ruta"].'",
 					"'.$estado.'",
-					"'.$productos[$i]["tipo"].'",
 					"'.$cabeceras["descripcion"].'",
-				  	"'.$cabeceras["palabrasClaves"].'",
 				  	"'.$imagenPortada.'",
 				  	"'.$imagenPrincipal.'",
-			 	  	"'.$vistaMultimedia.'",
 				  	"'.$vistaDetalles.'",
 		  			"'.$precio.'",
 				  	"'.$productos[$i]["peso"].' kg",
