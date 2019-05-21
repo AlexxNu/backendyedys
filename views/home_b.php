@@ -102,9 +102,7 @@
   <!-- Bootstrap slider http://seiyria.com/bootstrap-slider/-->
   <script src="views/plugins/bootstrap-slider/bootstrap-slider.js"></script>
 
-  <!-- DataTables -->
-  <script src="views/bower_components/datatables.net/js/jquery.dataTables.min"></script>
-  <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+ 
 
 </head>
 
@@ -180,10 +178,15 @@ session_start();
 JS PERSONALIZADO
 ======================================-->
 
+ <!-- DataTables -->
+ <script src="views/bower_components/datatables.net/js/jquery.dataTables.js"></script>
+  <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 <script src="views/js/plantilla.js"></script>
 <script src="views/js/gestorComercio.js"></script>
 <script src="views/js/gestorSlide.js"></script>
-<script src="views/jd/gestorProductos.js"></script>
+<script src="views/js/gestorProductos.js"></script>
+<script src="views/js/gestorCategorias.js"></script>
 
 </body>
 </html>

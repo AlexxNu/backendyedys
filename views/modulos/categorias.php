@@ -42,10 +42,8 @@
               <th>Categoría</th>
               <th>Ruta</th>
               <th>Estado</th>
-              <th>Descripción</th>
-              <th>Palabras Claves</th>
-              <th>Portada</th>
-              <th>Tipo de Oferta</th>
+              <th>Descripcion</th>
+              <th>Palabras Clave</th>
               <th>Valor Oferta</th>
               <th>Imagen Oferta</th>
               <th>Fin Oferta</th>
@@ -54,6 +52,37 @@
             </tr>
 
           </thead>
+
+          <tbody>
+            <tr>
+                
+                <td style="width:10px">1</td>
+                <td>Para Mama</td>
+                <td>Ruta</td>
+                <td><button class="btn btn-success btn-xs">Activado</button></td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Doloribus reiciendis repudiandae dolore, eum quisquam quibusdam et necessitatibus ratione. 
+                 Quod exercitationem quos totam! Porro libero cupiditate in a vero asperiores odit.</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit</td>
+                <td>70%</td>
+                <td>
+                <img class="img-thumbnail" src="http://localhost/backend/views/images/ofertas/para-mama.jpg" alt="para_mama" width="100px">
+                </td>
+                <td>2019-05-20 13:25:02</td>
+                <td>
+                  <div class="btn-group">
+                   <button class="btn btn-warning">
+                    <i class="fa fa-pencil"></i>
+                   </button>
+                   <button class="btn btn-danger">
+                    <i class="fa fa-times"></i>
+                   </button>
+                  </div>
+                </td>
+
+            </tr>
+          
+          </tbody>
 
         </table> 
 
