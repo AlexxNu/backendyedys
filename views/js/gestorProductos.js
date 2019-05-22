@@ -1,14 +1,14 @@
 /*=============================================
 CARGAR LA TABLA DINÁMICA DE PRODUCTOS
 =============================================*/
- //$.ajax({
-//
-//	url:"ajax/tablaProductos.ajax.php", 	success:function(respuesta){
-//				
-//		     console.log("Hola");
-//		 		console.log("respuesta", respuesta);
- //	}
- //})
+ $.ajax({
+
+	url:"ajax/tablaProductos.ajax.php", 	success:function(respuesta){
+				
+		     console.log("Hola");
+		 		console.log("respuesta", respuesta);
+ 	}
+ })
 
 
  $('.tablaProductos').DataTable({
@@ -1085,7 +1085,7 @@ $('.tablaProductos tbody').on("click", ".btnEditarProducto", function(){
 				$("#modalEditarProducto .selActivarOferta").val("");
 				$("#modalEditarProducto .datosOferta").hide();
 				$("#modalEditarProducto .valorOferta").prop("required",false);
-				$("#modalEditarProducto .previsualizarOferta").attr("src", "vistas/img/ofertas/default/default.jpg");
+				$("#modalEditarProducto .previsualizarOferta").attr("src", "views/img/ofertas/default/default.jpg");
 				$("#modalEditarProducto .antiguaFotoOferta").val(respuesta[0]["imgOferta"]);
 
 			}

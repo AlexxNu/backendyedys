@@ -53,14 +53,14 @@ class TablaCategorias{
 
 			}
 
-		 	$estado = "<button class='btn ".$colorEstado." btn-xs btnActivar' estadoCategoria='".$estadoCategoria."' idCategoria='".$categorias[$i]["id"]."'>".$textoEstado."</button>";
+		 	$estado = "<button class='btn ".$colorEstado." btn-xs btnActivar' estadoCategoria='".$estadoCategoria."' idCategoria='".$categorias[$i]["id_category"]."'>".$textoEstado."</button>";
 
 		 	/*=============================================
 			REVISAR IMAGEN PORTADA
 			=============================================*/ 
 
 			$item = "ruta";
-			$valor = $categorias[$i]["ruta"];
+			$valor = $categorias[$i]["rute"];
 
 			$cabeceras = ControladorCabeceras::ctrMostrarCabeceras($item, $valor);
 
@@ -70,7 +70,7 @@ class TablaCategorias{
 
 			}else{
 
-				$imgPortada = "<img class='img-thumbnail imgPortadaCategorias' src='views/images/cabeceras/default/default.jpg' width='100px'>";
+				$imgPortada = "<img class='img-thumbnail imgPortadaCategorias' src='views/images/cabeceras/default.png' width='100px'>";
 			}
 
 			/*=============================================
@@ -105,7 +105,7 @@ class TablaCategorias{
 
 			}else{
 
-				$imgOfertas = "<img class='img-thumbnail imgOfertaCategorias' src='views/images/ofertas/default/default.jpg' width='100px'>";
+				$imgOfertas = "<img class='img-thumbnail imgOfertaCategorias' src='views/images/ofertas/default/default.png' width='100px'>";
 
 			}
 
@@ -113,17 +113,15 @@ class TablaCategorias{
   			CREAR LAS ACCIONES
   			=============================================*/
 	    
-		    $acciones = "<div class='btn-group'><button class='btn btn-warning btnEditarCategoria' idCategoria='".$categorias[$i]["id"]."' data-toggle='modal' data-target='#modalEditarCategoria'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarCategoria' idCategoria='".$categorias[$i]["id"]."' imgPortada='".$cabeceras["portada"]."'  rutaCabecera='".$categorias[$i]["ruta"]."' imgOferta='".$categorias[$i]["imgOferta"]."'><i class='fa fa-times'></i></button></div>";
+		    $acciones = "<div class='btn-group'><button class='btn btn-warning btnEditarCategoria' idCategoria='".$categorias[$i]["id_category"]."' data-toggle='modal' data-target='#modalEditarCategoria'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarCategoria' idCategoria='".$categorias[$i]["id_category"]."'rutaCabecera='".$categorias[$i]["rute"]."' imgOferta='".$categorias[$i]["imgOferta"]."'><i class='fa fa-times'></i></button></div>";
 				    
 			$datosJson	 .= '[
 				      "'.($i+1).'",
-				      "'.$categorias[$i]["categoria"].'",
-				      "'.$categorias[$i]["ruta"].'",
+				      "'.$categorias[$i]["category"].'",
+				      "'.$categorias[$i]["rute"].'",
 				      "'. $estado.'",
 				      "'.$cabeceras["descripcion"].'",
 				      "'.$cabeceras["palabrasClaves"].'",
-				      "'.$imgPortada.'",
-				      "'.$tipoOferta.'",
 				      "'.$valorOferta.'",
 				      "'.$imgOfertas.'",
 				      "'.$categorias[$i]["finOferta"].'",

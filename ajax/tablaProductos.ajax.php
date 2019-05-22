@@ -48,18 +48,18 @@ class TablaProductos{
   			TRAER LAS CATEGORÍAS
   			=============================================*/
 
-  			$item = "id";
-			$valor = $productos[$i]["id_categoria"];
+  			$item = "id_category";
+			$valor = $productos[$i]["id_category"];
 
 			$categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
 
-			if($categorias["categoria"] == ""){
+			if($categorias["category"] == ""){
 
 				$categoria = "SIN CATEGORÍA";
 			
 			}else{
 
-				$categoria = $categorias["categoria"];
+				$categoria = $categorias["category"];
 			}
 
 			/*=============================================
@@ -98,7 +98,7 @@ class TablaProductos{
 
   			}
 
-  			$estado = "<button class='btn btn-xs btnActivar ".$colorEstado."' idProducto='".$productos[$i]["id"]."' estadoProducto='".$estadoProducto."'>".$textoEstado."</button>";
+  			$estado = "<button class='btn btn-xs btnActivar ".$colorEstado."' idProducto='".$productos[$i]["id_product"]."' estadoProducto='".$estadoProducto."'>".$textoEstado."</button>";
 
   			/*=============================================
   			TRAER LAS CABECERAS
@@ -115,7 +115,7 @@ class TablaProductos{
 
   			}else{
 
-  				$imagenPortada = "<img src='views/images/cabeceras/default/default.jpg' class='img-thumbnail imgPortadaProductos' width='100px'>";
+  				$imagenPortada = "<img src='views/images/cabeceras/default/default.png' class='img-thumbnail imgPortadaProductos' width='100px'>";
   			}
 
 			/*=============================================
@@ -126,7 +126,7 @@ class TablaProductos{
 
   			/*=============================================
 			TRAER MULTIMEDIA
-  			=============================================
+  			=============================================*/
 
   			if($productos[$i]["multimedia"] != null){
 
@@ -148,7 +148,7 @@ class TablaProductos{
   				$vistaMultimedia = "<img src='views/images/multimedia/default/default.jpg' class='img-thumbnail imgTablaMultimedia' width='100px'>";
 
   			}
-                */
+                
   			/*=============================================
   			TRAER DETALLES
   			=============================================*/
@@ -157,11 +157,11 @@ class TablaProductos{
 
   			if($productos[$i]["detalles"] != ""){
 
-  				$tamaño = json_encode($detalles["Tamaño"]);
+  				$tamaño = json_encode($detalles["Tamano"]);
 				$color = json_encode($detalles["Color"]);
 	
 
-				$vistaDetalles = "Tamaño: ".str_replace(array("[","]",'"'), "", $tamaño)." - Color: ".str_replace(array("[","]",'"'), "", $color)." - Marca: ");
+				$vistaDetalles = " - Color: ".str_replace(array("[","]",'"'), "", $color)." - Tamano: ".str_replace(array("[","]",'"'), "", $tamaño);
 
 
   			}else{
@@ -234,7 +234,7 @@ class TablaProductos{
 
 	  		}else{
 
-	  			$imgOferta = "<img src='views/images/ofertas/default/default.jpg' class='img-thumbnail imgTablaProductos' width='100px'>";
+	  			$imgOferta = "<img src='views/images/ofertas/default/default.png' class='img-thumbnail imgTablaProductos' width='100px'>";
 
 	  		}
 

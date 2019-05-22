@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Tienda Online | Panel de Control</title>
 
-  <link rel="icon" href="views/img/plantilla/icono.png">
+  <link rel="icon" href="views/images/plantilla/icono.png">
 
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   
@@ -47,6 +50,8 @@
 
    <!-- DataTables -->
   <script src="views/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"></script>
+  <script src="views/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css"></script>
+  
   
 
   <!--=====================================
@@ -110,7 +115,7 @@
 
 <?php
 
-session_start();
+
 
  if(isset($_SESSION["validarSesionBackend"]) && $_SESSION["validarSesionBackend"] === "ok"){
 
@@ -180,7 +185,11 @@ JS PERSONALIZADO
 
  <!-- DataTables -->
  <script src="views/bower_components/datatables.net/js/jquery.dataTables.js"></script>
-  <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+ <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+ <script src="views/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+ <script src="views/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
+
+  
 
 <script src="views/js/plantilla.js"></script>
 <script src="views/js/gestorComercio.js"></script>

@@ -502,7 +502,7 @@ $(".tablaSubCategorias tbody").on("click", ".btnEditarSubCategoria", function(){
 				$("#modalEditarSubCategoria .selActivarOferta").val("");
 				$("#modalEditarSubCategoria .datosOferta").hide();
 				$("#modalEditarSubCategoria .valorOferta").prop("required",false);
-				$("#modalEditarSubCategoria .previsualizarOferta").attr("src", "vistas/img/ofertas/default/default.jpg");
+				$("#modalEditarSubCategoria .previsualizarOferta").attr("src", "views/img/ofertas/default/default.jpg");
 				$("#modalEditarSubCategoria .antiguaFotoOferta").val(respuesta[0]["imgOferta"]);
 
 			}

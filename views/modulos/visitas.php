@@ -35,7 +35,7 @@
 
         <div class="box-tools">
 
-          <a href="vistas/modulos/reportes.php?reporte=visitaspersonas">
+          <a href="views/modulos/reportes.php?reporte=visitaspersonas">
 
             <button class="btn btn-success" style="margin-top:5px">Descargar reporte en Excel</button>
 

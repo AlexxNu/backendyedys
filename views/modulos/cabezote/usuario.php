@@ -12,7 +12,7 @@ USUARIOS
 
 		if($_SESSION["foto"] == ""){
 
-			echo '<img src="views/images/perfiles/default/anonymous.png" class="user-image" alt="User Image">';
+			echo '<img src="views/images/usuarios/default/anonymous.png" class="user-image" alt="User Image">';
 
 		}else{
 
@@ -37,7 +37,7 @@ USUARIOS
 
 			if($_SESSION["foto"] == ""){
 
-				echo '<img src="views/images/perfiles/default/anonymous.png" class="user-image" alt="User Image">';
+				echo '<img src="views/images/usuarios/default/anonymous.png" class="user-image" alt="User Image">';
 
 			}else{
 

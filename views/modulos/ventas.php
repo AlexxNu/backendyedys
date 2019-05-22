@@ -51,7 +51,7 @@ return;
 
         <div class="box-tools">
 
-          <a href="vistas/modulos/reportes.php?reporte=compras">
+          <a href="views/modulos/reportes.php?reporte=compras">
             
               <button class="btn btn-success">Descargar reporte en Excel</button>
 
