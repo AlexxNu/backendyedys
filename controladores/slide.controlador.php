@@ -72,7 +72,7 @@ class ControladorSlide{
 			BORRAMOS EL ANTIGUO FONDO DEL SLIDE
 			=============================================*/	
 
-			if($datos["imgFondo"] != "views/images/slide/default/fondo.jpg"){	
+			if($datos["imgFondo"] != "views/images/slides/default/fondo.jpg"){	
 
 				unlink("../".$datos["imgFondo"]);
 
@@ -82,7 +82,7 @@ class ControladorSlide{
 			CREAMOS EL DIRECTORIO SI NO EXISTE
 			=============================================*/	
 
-			$directorio = "../views/images/slide/slide".$datos["id"];
+			$directorio = "../views/images/slides/slide".$datos["id"];
 
 			if(!file_exists($directorio)){
 
@@ -148,7 +148,7 @@ class ControladorSlide{
 			CREAMOS EL DIRECTORIO SI NO EXISTE
 			=============================================*/		
 
-			$directorio = "../views/images/slide/slide".$datos["id"];
+			$directorio = "../views/images/slides/slide".$datos["id"];
 
 			if(!file_exists($directorio)){
 
@@ -217,7 +217,7 @@ class ControladorSlide{
 
 		if(isset($_GET["idSlide"])){
 
-			if($_GET["imgFondo"] != "views/images/slide/default/fondo.jpg"){
+			if($_GET["imgFondo"] != "views/images/slides/default/fondo.jpg"){
 
 				unlink($_GET["imgFondo"]);
 
@@ -229,7 +229,7 @@ class ControladorSlide{
 
 			}
 
-			rmdir('views/images/slide/slide'.$_GET["idSlide"]);
+			rmdir('views/images/slides/slide'.$_GET["idSlide"]);
 
 			$tabla = "slide";
 			$id = $_GET["idSlide"];
